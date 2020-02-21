@@ -1,23 +1,26 @@
 @charset "UTF-8";
 /* 리셋 */
 body {margin: 0; padding: 0;}
-ul,li,ol {list-style:none; padding:0; margin:0;}
+ul,li,ol,form {list-style:none; padding:0; margin:0;}
 a {text-decoration:none; color:#333;}
-p,h2,h1,h3,h4,h5,span {margin:0; color: #2a1703;}
-button {border: none;}
+p,h2,h1,h3,h4,h5,span {margin:0; color: #2a1703; }
+
 
 /* 상단 */
-header {width: 100%; height:722px; background-color: antiquewhite;}
-  .header_top {width:100%; height:85px; background-color: aqua; }
-  .header_topin {width: 1110px; height:85px; background-color: darkorange ; margin: 0 auto; display: flex; justify-content: space-between;}
-  .header_topin .logo {width: 105px; height: 85px; background-color: darkseagreen;}
-  .header_topin nav {width: 730px; height: 85px; background-color: deeppink;}
-  .header_topin nav ul {display: flex; justify-content: space-around;}
-  .header_topin nav li {width: 100px; height: 85px; background-color: deepskyblue;}
+header {width: 100%; height:722px; }
+  .header_top {width:100%; height:85px;}
+  .header_topin {width: 1110px; height:85px;  margin: 0 auto; display: flex; justify-content: space-between;}
+  .header_topin .logo {width: 105px; height: 85px;  display: flex; flex-direction: column; justify-content: center; align-items: center;}
+  .header_topin .logo h2 {font-weight: bold; color:#ffff }
+  .header_topin .logo p {letter-spacing: 6px; color:#ffff}
+  .header_topin nav {width: 730px; height: 85px; }
+  .header_topin nav ul {display: flex; justify-content: space-around;display: flex; justify-content: space-around;align-content: center;}
+  .header_topin nav li {width: 100px; height: 85px;  font-weight: bold;text-align: center; line-height: 85px; color:#fff}
+  .header_topin nav li:hover {color:#e5ce48; }
 
 /* 메인 슬라이드 */
-.slide {width: 1110px; height: 640px; background-color: rgb(222, 228, 146); margin: 0 auto; display: flex; justify-content: flex-start; align-items: center;}
-.slide .textbox {width:440px; height: 355px; background-color: limegreen; display: flex; flex-direction: column; align-items: flex-start;justify-content: space-around;}
+.slide {width: 1110px; height: 640px;  margin: 0 auto; display: flex; justify-content: flex-start; align-items: center;}
+.slide .textbox {width:440px; height: 355px; display: flex; flex-direction: column; align-items: flex-start;justify-content: space-around;}
 .header_bottom {width: 100%; height: 145px; background-color: mediumaquamarine; margin-top:-145px; display:flex; justify-content: flex-end;}
   .infobox {width: 50%; height: 145px; background-color: orange; display: flex; justify-content: space-around;align-items: center; }
   .firb {width: 320px; height: 145px; background-color: palegreen;display: flex;}
@@ -30,14 +33,140 @@ header {width: 100%; height:722px; background-color: antiquewhite;}
 #welcome {width:100%; height: 585px; background-color: palegreen;}
   .welcome_in {display:flex; }
   .welcome_movie {width:50%; height: 585px; background-color: peru; }
-  .welcome_textbox {width:50%; height: 585px; background-color: powderblue; }
+  .welcome_textbox {width:50%; height: 585px; background-color: powderblue; display: flex; flex-direction: column; justify-content: center; }
+
+/* 섹션 2*/
+#ourprocess {width: 100%; height: 777px; background-color: salmon; display: flex; align-items: center;}
+  .ourprocess_in {width: 1110px; height:578px; background-color: seagreen;margin: 0 auto;display: flex; flex-direction: column ;}
+  .ourprocess_top {width: 1110px; height: 188px; background-color: sienna; }
+  .ourprocess_top_out {width: 573px; height: 188px; background-color: springgreen; margin:0 auto;display: flex; flex-direction: column;justify-content: center;align-items: center;}
+  .ourprocess_top_out h3 {background-color: steelblue;}
+  .ourprocess_top_out h2 {}
+  .ourprocess_top_out p {}
+  .ourprocess_bottom {width: 1110px; height: 391px; background-color: rgb(155, 119, 102);}
+  .processboxs { display: flex;}
+  .processbox {width: 25%; height:391px; background-color: turquoise;display: flex; flex-direction: column; text-align: center;}
+    .boximg {width:100%; height: 50%;background-color: tomato;}
+    .processbox h3 {}
+    .processbox p {}
+
+/* 섹션 3*/
+#programs {width:100%; height: 1200px; background-color: palegreen;display: flex; justify-content: center; align-items: center;}
+ .programs_outline {width: 1140px; height: 1015px; background-color: tomato; display: flex;}
+  .programs_left {width: 50%; height: 100%; background-color: rgb(78, 88, 179);display: flex; flex-direction: column; justify-content: center; text-align: right;}
+   .programs_left span {}
+   .programs_left h2 {}
+   .programs_left p {}
+   .programs_left button {}
+  .programs_right {width: 50%; height: 100%; background-color: rgb(122, 64, 115);display: flex; flex-direction: column; text-align: left;}
+   .programs_content {width: 100%; height: 20%; background-color: yellow; border: 0.1px solid #666; display: flex;}
+   .programs_icon {width: 30%; height: 100%; background-color: rgb(106, 160, 160) ;}
+   .programs_text {width: 70%; height: 100%; display: flex; flex-direction: column; justify-content: center;}
+   .programs_text h2{}
+   .programs_text p{}
+
+/* 섹션 4*/
+#number {width:100%; height: 320px; background-color: rgb(236, 236, 211);display: flex; justify-content: center; align-items: center;}
+  .number_in {width:1110px; height:320px;background-color: tomato;display: flex;}
+  .number_content {width:25%; height: 320px; background-color: turquoise;display: flex; justify-content: center; align-items: center; flex-direction: column; border: 0.1px solid #666;}
+  .number_content h2{}
+  .number_content p{}
 
 
+/* 섹션 4*/
+#coaches {width: 100%; height: 1490px; background-color: yellowgreen;display: flex; flex-direction: column; justify-content: center; align-items: center;}
+ .coaches_top{width: 1110px; height:313px; background-color: dodgerblue; display: flex; flex-direction: column; justify-content: center;align-items: center; text-align: center; }
+ .coaches_bottom{width: 1110px; height:1040px; background-color: goldenrod;display: flex; flex-flow: row wrap;;}
+  .coaches_de{width:50%; height:50%; background-color: hotpink;display: flex;}
+  .coaches_pic{width:50%; height:auto; background-color: lightblue;}
+  .coaches_text{width:50%; height:520px; background-color: rgb(224, 122, 27); text-align: center;display: flex; flex-direction: column; justify-content: space-around; align-items: center; flex-wrap: wrap;}
+  .coaches_text span {}
+  .coaches_text h3 {}
+  .coaches_text p {width: auto;}
+  .coaches_sns {width:80%; height:65px; background-color: lightgreen; display: flex; justify-content: space-around;}
+  .coaches_sns img {width:32%; height: 65px; background-color: lightseagreen;}
+
+  /* 섹션 4*/
+#says {width: 100%; height: 610px; background-color: mediumslateblue; display: flex; flex-direction: column;}
+ .says_top {width:100%; height: 50%; background-color: mistyrose;display: flex; justify-content: center; align-items: center;}
+ .says_inbox {width:50%; height:181px; background-color: olive;display: flex; align-items:center;justify-content: center;flex-direction: column;}
+ .says_bottom {width:100%; height: 50%; background-color: rgb(192, 54, 39); display: flex; align-items: flex-end;}
+ .says_bottom_ment {width: 20%; height: 240px;; background-color: orange; display: flex; flex-direction: column;}
+ .says_bottom_ment_span {width: 100%; height: 70%; background-color: orchid;}
+ .says_bottom_ment_person {width: 100%; height: 30%; background-color: plum;display: flex; ;}
+ .says_bottom_img {width:40%; height:auto; background-color: rgb(192, 54, 39);}
+ .says_bottom_name{width: 60%; height:auto; background-color: rgb(222, 228, 146);}
 
 
+/* 섹션 5*/
+#packages {width:100%; height: 988px; background-color: rosybrown; }
+ .packages_outline {width:1110px; height:988px; background-color: royalblue; margin: 0 auto; display: flex; flex-direction: column; justify-content: center;;}
+ .packages_top {width:100%; height:300px; background-color: seagreen;display: flex; justify-content: center;align-items: center; }
+  .packages_inbox{width:50%; height:50%; background-color: sienna; text-align: center;display: flex; flex-direction: column; justify-content: center;}
+  .packages_inbox span {}
+  .packages_inbox h2 {}
+  .packages_inbox span {}
+ .packages_bottom {width:100%; height:538px; background-color: rgb(209, 221, 214);display: flex;justify-content: space-around;align-items: center;}
+ .packages_imgbox {width: 30%; height:100%; background-color: silver;display: flex;flex-direction: column;justify-content: space-around;align-content: center;}
+ .packages_image {width:100%; height:60%;background-color: slateblue;}
+ .packages_text {width:100%; height: 30%; background-color: springgreen;}
+ .packages_price {width:100%; height: 10%; background-color: tan; display: flex;justify-content: space-between;}
+ .packages_price h3 {width:35%; height:100%; background-color: teal;}
+ .packages_price button {width:35%; height:100%; background-color: tomato;}
+
+/* 섹션 6*/
+#blog {width:100%; height: 900px; background-color: rgb(152, 188, 143); }
+ .blog_outline {width:1110px; height:900px; background-color: rgb(162, 169, 190); margin: 0 auto; display: flex; flex-direction: column; justify-content: center;;}
+ .blog_top {width:100%; height:300px; background-color: seagreen;display: flex; justify-content: center;align-items: center; }
+ .blog_inbox {width:50%; height:50%; background-color: sienna; text-align: center;display: flex; flex-direction: column; justify-content: center;}
+ .blog_bottom {width:100%; height:439px; background-color: rgb(209, 221, 214);display: flex;justify-content: space-around;align-items: center;}
+ .blog_bottom_box {width: 30%; height:100%; background-color: silver;display: flex;flex-direction: column;justify-content: space-around;align-content: center;}
+ .blog_bottom_box_img {width:100%; height:60%;background-color: slateblue;}
+ .blog_bottom_box_text {width:100%; height: 40%; background-color: springgreen;}
+ .blog_bottom_box_text span {}
+ .blog_bottom_box_text h3 {}
+ .blog_bottom_box_text p {}
+
+/* 섹션 7*/
+#bottomslide {width:100%; height: 300px; background-color: rgb(96, 138, 187); }
+ .bottomslide_img {width:100%; heigth:300px;display: flex;}
+ .bottomslide_box {width:25%; height:300px; background-color: tomato;border: 0.1px solid #666;}
+ .bottomslide_box a {}
+
+/* 섹션 8*/
+#booking {width: 100%; height: 547px; background-color: violet;}
+ .booking_wrap {width: 100%; height: 547px; display: flex;}
+ .booking_map {width: 50%; height: 100%; background-color: wheat;}
+ .booking_apply {width: 50%; height: 100%; background-color: rgb(104, 98, 87); display: flex; flex-direction: column;justify-content: center;align-items: center;}
+ .booking_apply_wrap {width: 662px; height:273px; background-color: darkorchid;}
+ .booking_apply h3 {width: 50%; text-align: left;}
+ .booking_apply form {width: 660px; height:205px; background-color: darksalmon;display: flex; flex-direction: column;}
+ .booking_apply form input {border: transparent; border-bottom: 1px solid grey; background-color: rgb(129, 79, 79);}
+ .booking_apply form input::placeholder {opacity: 0.8;}
+  .booking_apply_first {width: 100%; height:68px; display: flex;}
+      .booking_apply_first input {width:100%; height: 100%;}
+      .apply_first {width:50%; height: 100%;}
+      .apply_last {width:50%; height: 100%;}
+  .booking_apply_sec {width: 100%; height:68px; display: flex; justify-content: space-between;}
+      .booking_apply_sec .date {width: 33%; height: 68px;}
+      .class_datewrap {width: 100%; height: 68px;}
+      .booking_apply_sec .time {width: 33%; height: 68px;}
+      .class_timewrap {width: 100%; height: 68px;}
+      .booking_apply_sec .phone {width: 33%; height: 68px;}
+      .booking_apply_sec input {width:100%; height: 100%;}
+  .booking_apply_thir {width: 100%; height:68px; display: flex; justify-content: space-between;}
+      .message {width: 50%; height: 68x;}
+      .booking_button {width: 50%; height: 68x;}
+      .booking_apply_thir input {width:100%; height: 100%;}
 
 
-
-
-
-
+/* footer*/
+footer {width: 100%; height: 630px; background-color: darksalmon; display: flex; flex-direction: column;justify-content: center; align-items: center;}
+ .footer_wrap {width: 1110px; height: 100%; background-color: darkslateblue;}
+ .footer_up {width: 100%; height:495px; background-color: darkturquoise;display: flex;}
+   .footer_1box {width: 25%; height:100%;background-color: dimgray;}
+   .footer_1box .box_text{width: 100%; height:70%; background-color: antiquewhite;}
+   .footer_1box .box_sns {width: 100%; height:30%; background-color: rgb(214, 138, 38); display: flex;}
+   .footer_2box {width: 35%; height:100%;background-color: forestgreen;}
+   .footer_3box {width: 15%; height:100%;background-color: goldenrod;}
+   .footer_4box {width: 25%; height:100%;background-color: lightblue;}
