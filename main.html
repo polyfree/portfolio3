@@ -8,14 +8,62 @@
     <script src="https://kit.fontawesome.com/44a6bf8b96.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>fithness</title>
+    <script>
+        // 상단li 딜레이 후 컬러변경
+        $(function(){
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        });
+        setTimeout(function(){
+            $(' .header_topin nav li').css('color','#fff');
+            $(' .header_topin nav li').hover(function(){
+                $(this).css('color','#e5ce48')
+            },function(){
+                $(this).css('color','#fff')
+            });
+            $(' .header_topin .logo h2').css('color','#fff');
+        },4400);
+        setTimeout(function(){
+        $(' .header_topin .logo p').css('color','#fff');
+        },4300);
+
+        // textbox 스크롤시 애니메이션
+        $(document).ready(function() {
+            $(window).scroll( function(){
+                $(".textbox").each( function(i){
+                    var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    if( bottom_of_window > bottom_of_element ){
+                        $(this).animate({'opacity':'1','margin-bottom':'-120px'},1000);
+                    }
+                }); 
+            });
+        });
+                // infobox 스크롤시 애니메이션
+                $(document).ready(function() {
+        $(window).scroll( function(){
+            $(".header_bottom").each( function(i){
+                    var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    if( bottom_of_window > bottom_of_element ){
+                $(this).animate({'opacity':'1','margin-top':'-30px'},1000);
+                    }
+                }); 
+            });
+        });
+
+
+    </script>
 </head>
 <body>
     <header>
+        <video src="img/main/video4.mp4" autoplay muted></video>
         <div class="header_top">
             <div class="header_topin">
                 <div class="logo">
+                <a href="main.html">
                     <h2>SOUNSO</h2>
                     <p>FITNESS</p>
+                </a>
                 </div>
                 <nav>
                     <ul>
@@ -32,9 +80,9 @@
         </div>
         <div class="slide">
             <div class="textbox">
-                    <h2>Challenge Yourself</h2>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                    <button type="button">Get Started Now</button>
+                    <h2>노원 중계 1:1통증운동<br>전문공간</h2>
+                    <p><span>근육학!</span>을 기본으로 여러분들의 몸과 마음과 생각이 건강해질 수 있는 그런 트레이닝을 해드리려 합니다.<br>회원 한분 한분을 사랑하고 축복하고 귀히 여기며 소운소를 운영하는것! 이것이 저의 가장 기본이며 핵심입니다.<br><br>저와 소운소를 통해서 회원분들이 건강할 수 있도록 최선을 다하겠습니다! </p>
+                    <button type="button">소운소 프로그램 알아보기</button>
             </div>
         </div>
         <div class="header_bottom">
@@ -42,15 +90,15 @@
                     <div class="firb">
                         <div class="firb_icon"></div>
                         <div class="firb_text">
-                            <h2>전화번호</h2>
-                            <p>소개내용</p>
+                            <h2>연락처</h2>
+                            <p>010-3165-1819</p>
                         </div>
                     </div>
                     <div class="firb">
                         <div class="firb_icon"></div>
                         <div class="firb_text">
-                            <h2>전화번호</h2>
-                            <p>소개내용</p>
+                            <h2>주소</h2>
+                            <p>서울 노운구 중계로 14길 37 2층 (중계동 84-59)</p>
                         </div>
                     </div>
                     <div class="firb">

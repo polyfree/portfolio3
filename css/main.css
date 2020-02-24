@@ -7,22 +7,28 @@ p,h2,h1,h3,h4,h5,span {margin:0; color: #2a1703; }
 
 
 /* 상단 */
-header {width: 100%; height:722px; }
+header {width: 100%; height:1080px;}
+  video {position: absolute; left:0; top:0; min-width: 100%; min-height: 100%; z-index: -1;}
   .header_top {width:100%; height:85px;}
   .header_topin {width: 1110px; height:85px;  margin: 0 auto; display: flex; justify-content: space-between;}
   .header_topin .logo {width: 105px; height: 85px;  display: flex; flex-direction: column; justify-content: center; align-items: center;}
-  .header_topin .logo h2 {font-weight: bold; color:#ffff }
-  .header_topin .logo p {letter-spacing: 6px; color:#ffff}
+  .header_topin .logo h2 {font-weight: bold; color:#e5ce48; }
+  .header_topin .logo p {letter-spacing: 6px;color:#e5ce48;}
   .header_topin nav {width: 730px; height: 85px; }
-  .header_topin nav ul {display: flex; justify-content: space-around;display: flex; justify-content: space-around;align-content: center;}
-  .header_topin nav li {width: 100px; height: 85px;  font-weight: bold;text-align: center; line-height: 85px; color:#fff}
-  .header_topin nav li:hover {color:#e5ce48; }
+  .header_topin nav ul {display: flex; justify-content: space-around;display: flex; justify-content: space-around;align-content: center; position:fixed;}
+  .header_topin nav li {width: 100px; height: 85px;  font-weight: bold;text-align: center; line-height: 85px; color:#e5ce48;}
+  .header_topin nav ul a li:hover {color:#e5ce48; }
 
 /* 메인 슬라이드 */
-.slide {width: 1110px; height: 640px;  margin: 0 auto; display: flex; justify-content: flex-start; align-items: center;}
-.slide .textbox {width:440px; height: 355px; display: flex; flex-direction: column; align-items: flex-start;justify-content: space-around;}
-.header_bottom {width: 100%; height: 145px; background-color: mediumaquamarine; margin-top:-145px; display:flex; justify-content: flex-end;}
-  .infobox {width: 50%; height: 145px; background-color: orange; display: flex; justify-content: space-around;align-items: center; }
+.slide {width: 1110px; height: 860px;  margin: 0 auto; display: flex; justify-content: flex-start; align-items: flex-end;}
+.slide .textbox {width:440px; height: 355px; display: flex; flex-direction: column; align-items: flex-start;justify-content: space-around; opacity:0; margin-bottom:-250px; max-width: 100%}
+.slide .textbox h2 {font-size: 40px; color:#fff}
+.slide .textbox p {color:#fff; font-size: 15px;}
+.slide .textbox span {color:#e5ce48; font-weight: bold;}
+.slide .textbox button {font-size:15px; padding: 15px; color:#fff; border:none; font-weight: bold; background-color: #f7bb00; border-radius: 10px; cursor: :pointer; box-shadow:1px 1px 3px #f7bb00;}
+.slide .textbox button:hover { color: grey; background-color: #ece6c2; cursor: pointer;}
+.header_bottom {width: 100%; height: 145px;  display:flex; justify-content: flex-end; opacity:0; margin-top:-150px; max-width: 100%}
+  .infobox {width: 50%; height: 145px; background-color: orange; display: flex; justify-content: space-around;align-items: center;}
   .firb {width: 320px; height: 145px; background-color: palegreen;display: flex;}
   .firb_icon {width: 60px; height: 145px; background-color: palevioletred;}
   .firb_text {width: 260px; height: 145px; background-color: teal; display: flex; flex-direction: column; justify-content: space-around;}
