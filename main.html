@@ -4,6 +4,7 @@
     <meta charset="UTF-8" name="sounso" content="HTML meta tag page">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/main.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link type="text/css" href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/44a6bf8b96.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -11,7 +12,7 @@
     <script>
         // 상단li 딜레이 후 컬러변경
         $(function(){
-            $("html, body").animate({ scrollTop: 0 }, "slow");
+            // $("html, body").animate({ scrollTop: 0 }, "slow");
         });
         setTimeout(function(){
             $(' .header_topin nav li').css('color','#fff');
@@ -33,13 +34,13 @@
                     var bottom_of_element = $(this).offset().top + $(this).outerHeight();
                     var bottom_of_window = $(window).scrollTop() + $(window).height();
                     if( bottom_of_window > bottom_of_element ){
-                        $(this).animate({'opacity':'1','margin-bottom':'-120px'},1000);
+                        $(this).animate({'opacity':'1','margin-bottom':'-100px'},1000);
                     }
                 }); 
             });
         });
                 // infobox 스크롤시 애니메이션
-                $(document).ready(function() {
+        $(document).ready(function() {
         $(window).scroll( function(){
             $(".header_bottom").each( function(i){
                     var bottom_of_element = $(this).offset().top + $(this).outerHeight();
@@ -50,13 +51,28 @@
                 }); 
             });
         });
+                // infobox 스크롤시 애니메이션
+         $(document).ready(function() {
+        $(window).scroll( function(){
+            $(".ourprocess_in").each( function(i){
+                    var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    if( bottom_of_window > bottom_of_element ){
+                $(this).animate({'opacity':'1','margin-top':'-30px'},1000);
+                    }
+                }); 
+            });
+        });        
 
 
     </script>
 </head>
 <body>
     <header>
-        <video src="img/main/video4.mp4" autoplay muted></video>
+        <div class="video_wrap">
+            <video src="img/main/video4.mp4" autoplay muted></video>
+        </div>
+        
         <div class="header_top">
             <div class="header_topin">
                 <div class="logo">
@@ -88,24 +104,24 @@
         <div class="header_bottom">
                 <div class="infobox">
                     <div class="firb">
-                        <div class="firb_icon"></div>
+                        <div class="firb_icon"><i class="fas fa-phone fa-2x"></i></div>
                         <div class="firb_text">
                             <h2>연락처</h2>
                             <p>010-3165-1819</p>
                         </div>
                     </div>
                     <div class="firb">
-                        <div class="firb_icon"></div>
+                        <div class="firb_icon"><i class="fas fa-map-marked-alt fa-2x"></i></div>
                         <div class="firb_text">
                             <h2>주소</h2>
-                            <p>서울 노운구 중계로 14길 37 2층 (중계동 84-59)</p>
+                            <p>서울 노운구 중계로 14길 37 2층</p>
                         </div>
                     </div>
                     <div class="firb">
-                        <div class="firb_icon"></div>
+                        <div class="firb_icon"><i class="fas fa-clock  fa-2x"></i></div>
                         <div class="firb_text">
-                            <h2>전화번호</h2>
-                            <p>소개내용</p>
+                            <h2>상담가능시간</h2>
+                            <p>AM 09:00 ~ PM 05:00</p>
                     </div>
                 </div>
             </div>
@@ -114,10 +130,12 @@
     </header>
     <section id="welcome">
         <article class="welcome_in">
-            <div class="welcome_movie"></div>
+            <div class="welcome_movie"><img src="img/main/2.jpg"></div>
             <div class="welcome_textbox">
-                <h2>WELCOME TO<span>BODYFIT</span></h2>
-                <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+                <h2>안녕하세요. <span>스텔론코치 입니다.</span></h2>
+                <p>소운소는 현재 1:1 개인레슨만을 진행하고 있습니다. 100% 예약제로 운영을 하고 있고(단! 한분만을 위한 운동공간입니다.)<br>운동시간은 일반적으로 주2회 ~ 주3회 주기로 하루 1시간 ~ 1시간 30분정도 소요됩니다. <br><br>
+                두통, 요통, 무릎통증, 하지저림 그리고 다이어트 및 하지비만으로 고민이신 분들이나 특히 공부하는 학생이나 사무직인 분들이 흔히 가지고 있는 어깨 통증, 뒷목 무거움, 허리저림 등등 다양한 통증으로 힘들어 하시는 분들께 소운소 이용을 권해드립니다.<br> 소운소를 이용하시려는 분들께 말씀드리고 싶은 것은 가능하다면 많은 코치님들과 상담을 하셔서 본인에게 가장 좋은 파트너를 만나시는 것이 중요합니다. 레슨을 받기 전 상담을 반드시 진행하고 있으며 방문하시기전에 시간예약을 부탁드리겠습니다.  </p>
+                <button type="button">예약하기</button>
             </div>
         </article>
     </section>
@@ -126,31 +144,31 @@
             <div class="ourprocess_top">
                 <div class="ourprocess_top_out">
                     <h3>services</h3>
-                    <h2>OUR PROCESS</h2>
-                    <p>본문</p>
+                    <h2>P.T PROCESS</h2>
+                    <p>변화를 두려워하지 마세요. 앞이 보이지 않는다 하여도 염려하지 마세요.<br> 통증을 참지 마세요.<br> 여러분의 몸을 소중히 생각해주세요.</p>
                 </div>
             </div>
             <div class="ourprocess_bottom">
                 <div class="processboxs">
                     <div class="processbox">
-                        <div class="boximg"><img src=""></div>
-                        <h3>test</h3>
-                        <p>test</p>
+                        <div class="boximg"><i class="fas fa-question-circle fa-5x"></i></div>
+                        <h3>초기상담</h3>
+                        <p>초기상담 구체적 내용</p>
                     </div>
                     <div class="processbox">
-                        <div class="boximg"><img src=""></div>
-                        <h3>test</h3>
-                        <p>test</p>
+                        <div class="boximg"><i class="fas fa-dumbbell fa-5x"></i></div>
+                        <h3>웨이트 트레이닝</h3>
+                        <p>웨이트 트레이닝 프로세스 내용 추가</p>
                     </div>
                     <div class="processbox">
-                        <div class="boximg"><img src=""></div>
-                        <h3>test</h3>
-                        <p>test</p>
+                        <div class="boximg"><i class="fas fa-running fa-5x"></i></div>
+                        <h3>스트레칭</h3>
+                        <p>스트레칭 순서소개</p>
                     </div> 
                     <div class="processbox">
-                        <div class="boximg"><img src=""></div>
-                        <h3>test</h3>
-                        <p>test</p>
+                        <div class="boximg"><i class="fas fa-sign-language fa-5x"></i></div>
+                        <h3>촉진</h3>
+                        <p>마사지 부분 소개 멘트</p>
                     </div> 
                 </div>
 
@@ -160,52 +178,39 @@
     <section id="programs">
         <div class="programs_outline">
             <div class="programs_left">
-                <span>test</span>
-                <h2>test</h2>
-                <p>test</p>
-                <button type="button">test</button>
+                <h3>FITNESS</h3>
+                <h2>소운소 소개</h2>
+                <p>소운소 내부 모습입니다. 최고의 기구와 최첨단 시설은 아니지만 회원님들 한분 한분을 최선을 다해 지도해 드리는 제가 이곳에 있습니다.</p>
+                <button type="button">자세히 알아보기</button>
             </div>
             <div class="programs_right">
                 <div class="programs_content">
-                    <div class="programs_icon"></div>
-                    <div class="programs_text">
-                        <h2>test</h2>
-                        <p>test</p>
+                    
+                    <div class="programs_text" style="background-image: url('img/main/1.png');">
                     </div>
+                    <div class="programs_icon"><h2> 공기청정기 설치 및 촉진을 위한 공간</h2></div>
                 </div>
                 <div class="programs_content">
-                    <div class="programs_icon"></div>
-                    <div class="programs_text">
-                        <h2></h2>
-                        <p></p>
-                    </div>
+                    <div class="programs_text"  style="background-image: url('img/main/2.png');">                    </div>
+                    <div class="programs_icon"><h2> 인조 잔디 floor</h2></div>
                 </div>
                 <div class="programs_content">
-                    <div class="programs_icon"></div>
-                    <div class="programs_text">
-                        <h2></h2>
-                        <p></p>
-                    </div>
+                    <div class="programs_text"  style="background-image: url('img/main/4.png');"></div>
+                    <div class="programs_icon"><h2>탁트인 개방감과<br>충분한 일조량.</h2></div>
                 </div>
                 <div class="programs_content">
-                    <div class="programs_icon"></div>
-                    <div class="programs_text">
-                        <h2></h2>
-                        <p></p>
-                    </div>
+                    <div class="programs_text"  style="background-image: url('img/main/3.png');"></div>
+                    <div class="programs_icon"><h2> 개인 맞춤용 운동기구</h2></div>
                 </div>
                 <div class="programs_content">
-                    <div class="programs_icon"></div>
-                    <div class="programs_text">
-                        <h2></h2>
-                        <p></p>
-                    </div>
+                    <div class="programs_text" style="background-image: url('img/main/5.png');"></div>
+                    <div class="programs_icon"><h2> 태플릿을 통한<br>근육강의</h2></div>
                 </div>
 
             </div>
         </div>
     </section>
-    <section id="number">
+    <section id="number" style= "background-image: url('img/main/3.jpg')";>
         <div class="number_in">
             <div class="number_content">
                 <h2>test</h2>

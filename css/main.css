@@ -1,80 +1,88 @@
 @charset "UTF-8";
 /* 리셋 */
-body {margin: 0; padding: 0;}
+body {margin: 0; padding: 0; }
 ul,li,ol,form {list-style:none; padding:0; margin:0;}
 a {text-decoration:none; color:#333;}
 p,h2,h1,h3,h4,h5,span {margin:0; color: #2a1703; }
 
 
 /* 상단 */
-header {width: 100%; height:1080px;}
-  video {position: absolute; left:0; top:0; min-width: 100%; min-height: 100%; z-index: -1;}
+header {width: 100%; height:auto; overflow: hidden;}
+  .video_wrap {position: relative; width:100%;}
+  video {position: absolute; left:0; top:0; width: 100%; min-height: 100%; z-index: -1;}
   .header_top {width:100%; height:85px;}
   .header_topin {width: 1110px; height:85px;  margin: 0 auto; display: flex; justify-content: space-between;}
   .header_topin .logo {width: 105px; height: 85px;  display: flex; flex-direction: column; justify-content: center; align-items: center;}
-  .header_topin .logo h2 {font-weight: bold; color:#e5ce48; }
-  .header_topin .logo p {letter-spacing: 6px;color:#e5ce48;}
-  .header_topin nav {width: 730px; height: 85px; }
-  .header_topin nav ul {display: flex; justify-content: space-around;display: flex; justify-content: space-around;align-content: center; position:fixed;}
-  .header_topin nav li {width: 100px; height: 85px;  font-weight: bold;text-align: center; line-height: 85px; color:#e5ce48;}
-  .header_topin nav ul a li:hover {color:#e5ce48; }
+  .header_topin .logo h2 {font-weight: bold; color:#fdbb03; }
+  .header_topin .logo p {letter-spacing: 6px;color:#fdbb03;}
+  .header_topin nav {width: 670px; height: 85px; }
+  .header_topin nav ul {display: flex; justify-content: space-around;display: flex; justify-content: center;align-content: center;}
+  .header_topin nav li {height: 85px; padding-right:35px; font-weight: bolder; text-align: center; line-height: 85px; color:#e5ce48;}
+  .header_topin nav ul a li:hover {color:#fdbb03; }
 
 /* 메인 슬라이드 */
 .slide {width: 1110px; height: 860px;  margin: 0 auto; display: flex; justify-content: flex-start; align-items: flex-end;}
-.slide .textbox {width:440px; height: 355px; display: flex; flex-direction: column; align-items: flex-start;justify-content: space-around; opacity:0; margin-bottom:-250px; max-width: 100%}
+.slide .textbox {width:440px; height: 370px; display: flex; flex-direction: column; align-items: flex-start;justify-content: space-around; opacity:0; margin-bottom:-250px; max-width: 100%}
 .slide .textbox h2 {font-size: 40px; color:#fff}
 .slide .textbox p {color:#fff; font-size: 15px;}
-.slide .textbox span {color:#e5ce48; font-weight: bold;}
+.slide .textbox span {color:#fdbb03; font-weight: bolder;}
 .slide .textbox button {font-size:15px; padding: 15px; color:#fff; border:none; font-weight: bold; background-color: #f7bb00; border-radius: 10px; cursor: :pointer; box-shadow:1px 1px 3px #f7bb00;}
 .slide .textbox button:hover { color: grey; background-color: #ece6c2; cursor: pointer;}
 .header_bottom {width: 100%; height: 145px;  display:flex; justify-content: flex-end; opacity:0; margin-top:-150px; max-width: 100%}
-  .infobox {width: 50%; height: 145px; background-color: orange; display: flex; justify-content: space-around;align-items: center;}
-  .firb {width: 320px; height: 145px; background-color: palegreen;display: flex;}
-  .firb_icon {width: 60px; height: 145px; background-color: palevioletred;}
-  .firb_text {width: 260px; height: 145px; background-color: teal; display: flex; flex-direction: column; justify-content: space-around;}
-  .firb_text h2 {}
+  .infobox {width: 50%; height: 145px; background-color: #fdba03ab; display: flex; justify-content: space-around;align-items: center; padding-left:20px; }
+  .firb {width: 320px; height: 145px; display: flex;}
+  .firb_icon {width: 60px; height: 145px; line-height: 145px; padding-right: 10px; }
+  .firb_icon i {padding: 28px 0 0 10px; }
+  .firb_text {width: 260px; height: 145px;display: flex; flex-direction: column; justify-content: center; }
+  .firb_text h2 {padding-bottom: 10px; }
   .firb_text p {}
 
 /* 섹션 1*/
-#welcome {width:100%; height: 585px; background-color: palegreen;}
+#welcome {width:100%; height: 585px;}
   .welcome_in {display:flex; }
-  .welcome_movie {width:50%; height: 585px; background-color: peru; }
-  .welcome_textbox {width:50%; height: 585px; background-color: powderblue; display: flex; flex-direction: column; justify-content: center; }
+  .welcome_movie {width:50%; height: 585px; background-color: peru; overflow: hidden;}
+  .welcome_movie img {max-width: 100%;}
+  .welcome_textbox {width:50%; height: 585px;display: flex; flex-direction: column; justify-content: center;padding-left: 40px;}
+  .welcome_textbox h2 {padding-bottom: 20px; font-size: 40px;}
+  .welcome_textbox p {padding-bottom: 40px;}
+  .welcome_textbox button {width: 25%;font-size:15px; padding: 15px; color:#fff; border:none; font-weight: bold; background-color: #f7bb00; border-radius: 10px; cursor: :pointer; box-shadow:1px 1px 3px #f7bb00;}
+  .welcome_textbox button:hover { color: grey; background-color: #ece6c2; cursor: pointer;}
 
 /* 섹션 2*/
-#ourprocess {width: 100%; height: 777px; background-color: salmon; display: flex; align-items: center;}
-  .ourprocess_in {width: 1110px; height:578px; background-color: seagreen;margin: 0 auto;display: flex; flex-direction: column ;}
-  .ourprocess_top {width: 1110px; height: 188px; background-color: sienna; }
-  .ourprocess_top_out {width: 573px; height: 188px; background-color: springgreen; margin:0 auto;display: flex; flex-direction: column;justify-content: center;align-items: center;}
-  .ourprocess_top_out h3 {background-color: steelblue;}
-  .ourprocess_top_out h2 {}
-  .ourprocess_top_out p {}
-  .ourprocess_bottom {width: 1110px; height: 391px; background-color: rgb(155, 119, 102);}
+#ourprocess {width: 100%; height: 777px;  display: flex; align-items: center; background-color: #f5f3ee5d;}
+  .ourprocess_in {width: 1110px; height:578px; margin: 0 auto;display: flex; flex-direction: column; opacity:0; margin-top:-150px; max-width: 100%}
+  .ourprocess_top {width: 1110px; height: 188px;  }
+  .ourprocess_top_out {width: 573px; height: 188px;  margin:0 auto;display: flex; flex-direction: column;justify-content: center;align-items: center;}
+  .ourprocess_top_out h3 {color:#fdbb03;}
+  .ourprocess_top_out h2 {font-size:40px; padding-bottom: 20px;}
+  .ourprocess_top_out p {text-align: center; }
+  .ourprocess_bottom {width: 1110px; height: 391px;}
   .processboxs { display: flex;}
-  .processbox {width: 25%; height:391px; background-color: turquoise;display: flex; flex-direction: column; text-align: center;}
-    .boximg {width:100%; height: 50%;background-color: tomato;}
-    .processbox h3 {}
-    .processbox p {}
+  .processbox {width: 25%; height:391px; display: flex; flex-direction: column; text-align: center;}
+    .boximg {width:100%; height: 50%;color:#fdbb03;  display: flex; flex-direction: column; justify-content: center;}
+    .processbox h3 {padding-bottom: 30px;}
+    .processbox p { }
 
 /* 섹션 3*/
-#programs {width:100%; height: 1200px; background-color: palegreen;display: flex; justify-content: center; align-items: center;}
- .programs_outline {width: 1140px; height: 1015px; background-color: tomato; display: flex;}
-  .programs_left {width: 50%; height: 100%; background-color: rgb(78, 88, 179);display: flex; flex-direction: column; justify-content: center; text-align: right;}
-   .programs_left span {}
-   .programs_left h2 {}
-   .programs_left p {}
-   .programs_left button {}
-  .programs_right {width: 50%; height: 100%; background-color: rgb(122, 64, 115);display: flex; flex-direction: column; text-align: left;}
-   .programs_content {width: 100%; height: 20%; background-color: yellow; border: 0.1px solid #666; display: flex;}
-   .programs_icon {width: 30%; height: 100%; background-color: rgb(106, 160, 160) ;}
-   .programs_text {width: 70%; height: 100%; display: flex; flex-direction: column; justify-content: center;}
-   .programs_text h2{}
-   .programs_text p{}
+#programs {width:100%; height: 1100px; display: flex; justify-content: center; align-items: center;}
+ .programs_outline {width: 1140px; height: 1015px; display: flex;}
+  .programs_left {width: 50%; height: 100%; display: flex; flex-direction: column;justify-content: center; text-align: right; align-items: flex-end; padding-right: 50px;}
+   .programs_left h3 {color:#fdbb03;}
+   .programs_left h2 {font-size:40px; padding-bottom: 20px;}
+   .programs_left p {padding-bottom: 40px;}
+   .programs_left button {width: 30%;font-size:15px; padding: 15px; color:#fff; border:none; font-weight: bold; background-color: #f7bb00; border-radius: 10px; cursor: :pointer; box-shadow:1px 1px 3px #f7bb00;}
+   .programs_left button:hover { color: grey;  cursor: pointer;}
+  .programs_right {width: 50%; height: 100%; display: flex; flex-direction: column; text-align: left;}
+   .programs_content {width: 100%; height: 20%; display: flex; padding: 10px;}
+   .programs_icon {width: 30%; height: 100%; display: flex; flex-direction: column; justify-content: center; background-color:#f7bb00;}   
+   .programs_text {width: 70%; height: 100%; display: flex; flex-direction: column; justify-content: center; background-position: center; background-size: cover; transition: all 0.5s;}
+   .programs_text:hover {opacity: 0.7; cursor: pointer;;}
+   .programs_icon h2{width: 90%; text-align: center; font-size: 15px; color:#fff ;margin: 0 auto;}
 
 /* 섹션 4*/
-#number {width:100%; height: 320px; background-color: rgb(236, 236, 211);display: flex; justify-content: center; align-items: center;}
-  .number_in {width:1110px; height:320px;background-color: tomato;display: flex;}
-  .number_content {width:25%; height: 320px; background-color: turquoise;display: flex; justify-content: center; align-items: center; flex-direction: column; border: 0.1px solid #666;}
+#number {width:100%; height: 320px; background-attachment: fixed; background-size: cover; background-position:center;: flex; justify-content: center; align-items: center;}
+  .number_in {width:1110px; height:320px;display: flex;}
+  .number_content {width:25%; height: 320px; display: flex; justify-content: center; align-items: center; flex-direction: column; border: 0.1px solid #666; }
   .number_content h2{}
   .number_content p{}
 
