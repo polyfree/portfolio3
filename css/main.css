@@ -5,11 +5,11 @@ ul,li,ol,form {list-style:none; padding:0; margin:0;}
 a {text-decoration:none; color:#333;}
 p,h2,h1,h3,h4,h5,span {margin:0; color: #2a1703; }
 
-
+#wrap{width: 100%; padding:0px; margin: 0 auto;}
 /* 상단 */
 header {width: 100%; height:auto; overflow: hidden;}
-  .video_wrap {position: relative; width:100%;}
-  video {position: absolute; left:0; top:0; width: 100%; min-height: 100%; z-index: -1;}
+  .video_wrap {position: relative; width:100%; height: auto;}
+   video {position: absolute; left:0; top:0; width: auto; height: auto; min-width: 100%; min-height: 100%; z-index: -1;}
   .header_top {width:100%; height:85px;}
   .header_topin {width: 1110px; height:85px;  margin: 0 auto; display: flex; justify-content: space-between;}
   .header_topin .logo {width: 105px; height: 85px;  display: flex; flex-direction: column; justify-content: center; align-items: center;}
@@ -21,14 +21,14 @@ header {width: 100%; height:auto; overflow: hidden;}
   .header_topin nav ul a li:hover {color:#fdbb03; }
 
 /* 메인 슬라이드 */
-.slide {width: 1110px; height: 860px;  margin: 0 auto; display: flex; justify-content: flex-start; align-items: flex-end;}
-.slide .textbox {width:440px; height: 370px; display: flex; flex-direction: column; align-items: flex-start;justify-content: space-around; opacity:0; margin-bottom:-250px; max-width: 100%}
+.slide {width: 100%; height: 890px;  margin: 0 auto; position: relative;}
+.slide .textbox {width:440px; height: 370px;  display: flex; flex-direction: column; align-items: flex-start;justify-content: space-around; opacity:0; margin-bottom:-250px; max-width: 100%; position: absolute; bottom:0px; left: 19%;}
 .slide .textbox h2 {font-size: 40px; color:#fff}
 .slide .textbox p {color:#fff; font-size: 15px;}
 .slide .textbox span {color:#fdbb03; font-weight: bolder;}
 .slide .textbox button {font-size:15px; padding: 15px; color:#fff; border:none; font-weight: bold; background-color: #f7bb00; border-radius: 10px; cursor: :pointer; box-shadow:1px 1px 3px #f7bb00;}
 .slide .textbox button:hover { color: grey; background-color: #ece6c2; cursor: pointer;}
-.header_bottom {width: 100%; height: 145px;  display:flex; justify-content: flex-end; opacity:0; margin-top:-150px; max-width: 100%}
+.header_bottom {width: 100%; height: 145px;  display:flex; justify-content: flex-end; opacity:0; margin-top:-900px; max-width: 100%}
   .infobox {width: 50%; height: 145px; background-color: #fdba03ab; display: flex; justify-content: space-around;align-items: center; padding-left:20px; }
   .firb {width: 320px; height: 145px; display: flex;}
   .firb_icon {width: 60px; height: 145px; line-height: 145px; padding-right: 10px; }
@@ -90,6 +90,9 @@ header {width: 100%; height:auto; overflow: hidden;}
 /* 섹션 4*/
 #coaches {width: 100%; height: 1490px; background-color: yellowgreen;display: flex; flex-direction: column; justify-content: center; align-items: center;}
  .coaches_top{width: 1110px; height:313px; background-color: dodgerblue; display: flex; flex-direction: column; justify-content: center;align-items: center; text-align: center; }
+ .coaches_top h3 {color:#fdbb03;}
+ .coaches_top h2 {font-size:40px; padding-bottom: 20px;}
+ .coaches_top p {padding-bottom: 40px;}
  .coaches_bottom{width: 1110px; height:1040px; background-color: goldenrod;display: flex; flex-flow: row wrap;;}
   .coaches_de{width:50%; height:50%; background-color: hotpink;display: flex;}
   .coaches_pic{width:50%; height:auto; background-color: lightblue;}
